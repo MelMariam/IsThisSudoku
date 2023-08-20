@@ -8,12 +8,13 @@ int main()
 {   
     int matrix[N][N];
     int mistakeCounter = 0;
-    int hintCounter = 3;
+    //int hintCounter = 3;
 
     cout << "--------------Sudoku--------------" << endl;
     
     generateSudoku(matrix);
-    cout << "Mistakes: " << mistakeCounter << "/3,  Hints: " << hintCounter << "/3\n";
+   //cout << "Mistakes: " << mistakeCounter << "/3,  Hints: " << hintCounter << "/3\n";
+    cout << "Mistakes: " << mistakeCounter << "/3\n";
     printGrid(matrix);
     cout << "Rules:\n";
     cout << "Enter row, column, and value (in that order) separated by spaces.\nEnter -1 to finish.\n" ;
@@ -81,7 +82,8 @@ int main()
         }
         //update indexed place and Print edited grid
         matrix[row][col] = value;
-        cout << "Mistakes: " << mistakeCounter << "/3,  Hints: " << hintCounter << "/3\n";
+        //cout << "Mistakes: " << mistakeCounter << "/3,  Hints: " << hintCounter << "/3\n";
+        cout << "Mistakes: " << mistakeCounter << "/3\n";
         printGrid(matrix);
     }
     if (mistakeCounter ==3) {
